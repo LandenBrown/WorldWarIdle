@@ -231,10 +231,49 @@ function toggleRussiaSelected() {
 // SUBMIT COUNTRY DATA TO LOCAL STORAGE
         
 function loadCountryDataToLocalStorage(){
+    var startingLumber = 0
+    var startingSteel = 0
+    var startingGunpowder = 0
+    var startingFuel = 0
     leaderInputName = document.getElementById("leaderInputBox").value;
     //alert(leaderInputName)
+    // Creating local storage values for now and future use
     localStorage.setItem("WWi-A1-leadername", leaderInputName);
     localStorage.setItem("WWi-A1-selectedcountry", selectedCountry);
+    if (selectedCountry == "America"){
+        startingLumber = 100;
+        startingSteel = 300;
+        startingGunpowder = 200;
+        startingFuel = 100;
+    }
+    if (selectedCountry == "China"){
+        startingLumber = 200;
+        startingSteel = 100;
+        startingGunpowder = 400;
+        startingFuel = 100;
+    }
+    if (selectedCountry == "Russia"){
+        startingLumber = 300;
+        startingSteel = 100;
+        startingGunpowder = 100;
+        startingFuel = 300;
+    }
+    //Refinery counts in local storage
+    localStorage.setItem("WWi-A1-lumbermillcount", 0)
+    localStorage.setItem("WWi-A1-steelminecount", 0)
+    localStorage.setItem("WWi-A1-gunpowderplantcount", 0)
+    localStorage.setItem("WWi-A1-fuelplantcount", 0)
+    //Unit counts in local storage
+    localStorage.setItem("WWi-A1-unitsoldiercount", 0)
+    localStorage.setItem("WWi-A1-unitapccount", 0)
+    localStorage.setItem("WWi-A1-unittankcount", 0)
+    localStorage.setItem("WWi-A1-unitjetcount", 0)
+    //Resource counts in local storage
+    localStorage.setItem("WWi-A1-lumberresourcecount", startingLumber)
+    localStorage.setItem("WWi-A1-steelresourcecount", startingSteel)
+    localStorage.setItem("WWi-A1-gunpowderresourcecount", startingGunpowder)
+    localStorage.setItem("WWi-A1-fuelresourcecount", startingFuel)
+    //continue doin stuff
     var mainApp = document.getElementById("main-app-container")
     var creatorApp = document.getElementById("country-creator-splash")
     creatorApp.style.display = "none";
@@ -249,4 +288,26 @@ function loadCountryDataToLocalStorage(){
     statisticsContainer.style.display = "none";
 }
 
+
+
+//INCREMENTING INDUSTRY VALUES
+function onClick_createIndustryObject(x){
+    var currentResourceCount = localStorage.getItem(x);
+    currentResourceCount = parseInt(currentResourceCount);
+    currentResourceCount += 1;
+    localStorage.setItem(x, currentResourceCount);
+}
+
+//INCREMENT UNIT VALUES
+function onClick_createUnitObject(x){
+    var currentUnitCount = localStorage.getItem(x);
+    currentUnitCount = parseInt(currentUnitCount);
+    currentUnitCount += 1;
+    localStorage.setItem(x, currentUnitCount);
+}
+
+
+
+
+//Wait for page to load before attempting to interact with any elements
 $(document).ready(loadInitialContent);
