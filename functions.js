@@ -5,18 +5,31 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 
 //ONLOAD FUNCTION
-function onLoadContainers(){
+function loadInitialContent(){
+    var mainApp = document.getElementById("main-app-container")
+    var creatorApp = document.getElementById("country-creator-splash")
+    mainApp.style.display = "none";
+    creatorApp.style.display = "none";
 
-    //On page load, load industry by default
-    var industryContainer = document.getElementById("Industry-Container");
-    var trainingContainer = document.getElementById("Training-Container");
-    var operationsContainer = document.getElementById("Operations-Container");
-    var statisticsContainer = document.getElementById("Statistics-Container");
-    industryContainer.style.display = "block";
-    trainingContainer.style.display = "none";
-    operationsContainer.style.display = "none";
-    statisticsContainer.style.display = "none";
-    
+    if ("WWi-A1-leadername" in localStorage) {
+        mainApp.style.display = "block";
+        creatorApp.style.display = "none";
+        //alert("data exists in local storage...")
+        var industryContainer = document.getElementById("Industry-Container");
+        var trainingContainer = document.getElementById("Training-Container");
+        var operationsContainer = document.getElementById("Operations-Container");
+        var statisticsContainer = document.getElementById("Statistics-Container");
+        industryContainer.style.display = "block";
+        trainingContainer.style.display = "none";
+        operationsContainer.style.display = "none";
+        statisticsContainer.style.display = "none";
+
+    }
+    else{
+        creatorApp.style.display = "block";
+        mainApp.style.display = "none";
+        //alert("data does not exist in local storage...")
+    }
 
 }
 
@@ -159,7 +172,7 @@ function toggleAmericaSelected() {
         chinaContainer.style.display = "none";
         russiaContainer.style.display = "none";
     }
-    alert(selectedCountry);
+    //alert(selectedCountry);
     return selectedCountry;
 };
 
@@ -185,7 +198,7 @@ function toggleChinaSelected() {
         americaContainer.style.display = "none";
         russiaContainer.style.display = "none";
     }
-    alert(selectedCountry);
+    //alert(selectedCountry);
     return selectedCountry;
 };
 
@@ -211,7 +224,7 @@ function toggleRussiaSelected() {
         chinaContainer.style.display = "none";
         americaContainer.style.display = "none";
     }
-    alert(selectedCountry);
+    //alert(selectedCountry);
     return selectedCountry;
 };
 
@@ -219,8 +232,21 @@ function toggleRussiaSelected() {
         
 function loadCountryDataToLocalStorage(){
     leaderInputName = document.getElementById("leaderInputBox").value;
-    alert(leaderInputName)
+    //alert(leaderInputName)
     localStorage.setItem("WWi-A1-leadername", leaderInputName);
     localStorage.setItem("WWi-A1-selectedcountry", selectedCountry);
+    var mainApp = document.getElementById("main-app-container")
+    var creatorApp = document.getElementById("country-creator-splash")
+    creatorApp.style.display = "none";
+    mainApp.style.display = "block";
+    var industryContainer = document.getElementById("Industry-Container");
+    var trainingContainer = document.getElementById("Training-Container");
+    var operationsContainer = document.getElementById("Operations-Container");
+    var statisticsContainer = document.getElementById("Statistics-Container");
+    industryContainer.style.display = "block";
+    trainingContainer.style.display = "none";
+    operationsContainer.style.display = "none";
+    statisticsContainer.style.display = "none";
 }
 
+$(document).ready(loadInitialContent);
