@@ -68,43 +68,43 @@
                 </div>
                 <!-- End of Industry Information Container-->
                 <!-- Industry Card Container-->
-                <div class="container">
+                <div class="container noselect">
                     <div class="row">
                         <!-- Lumber Mill Card-->
-                        <div class="col industry-card" onClick="onClick_createIndustryObject('WWi-A1-lumbermillcount')">
+                        <div class="col industry-card" onClick="onClick_createIndustryObject('WWi-A1-lumbermillcount'); getCurrentAmount('WWi-A1-lumbermillcount', 'lumberMillCurrentCount')">
                             <div class="card-body">
                                 <h5 class="card-title">Build Lumber Mill</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Current amount:</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" id="lumberMillCurrentCount">Current Amount: 0</h6>
                                 <div class="industry-card-desc">
                                     <p class="card-text">Lumber mills will help us output the needed resources to build basic weapon parts!</p>
                                 </div>
                             </div>      
                         </div>
                         <!-- Steel Mine Card-->
-                        <div class="col industry-card" onClick="onClick_createIndustryObject('WWi-A1-steelminecount')">
+                        <div class="col industry-card" onClick="onClick_createIndustryObject('WWi-A1-steelminecount'); getCurrentAmount('WWi-A1-steelminecount', 'steelMineCurrentCount')">
                             <div class="card-body">
                                 <h5 class="card-title">Build Steel Mine</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Current amount:</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" id="steelMineCurrentCount">Current Amount: 0</h6>
                                 <div class="industry-card-desc">
                                     <p class="card-text">Steel mines will help us output the needed resources to build vehicles and structures!</p>
                                 </div>
                             </div>
                         </div>
                         <!-- Lead Mine Card-->
-                        <div class="col industry-card" onClick="onClick_createIndustryObject('WWi-A1-gunpowderplantcount')">
+                        <div class="col industry-card" onClick="onClick_createIndustryObject('WWi-A1-gunpowderplantcount'); getCurrentAmount('WWi-A1-gunpowderplantcount', 'gunpowderPlantCurrentCount')">
                             <div class="card-body">
                                 <h5 class="card-title">Build Gunpowder Plant</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Current amount:</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" id="gunpowderPlantCurrentCount">Current Amount: 0</h6>
                                 <div class="industry-card-desc">
                                     <p class="card-text">Gunpowder plants will help us ouput the needed resources to build ammunition!</p>
                                 </div>
                             </div>
                         </div>
                         <!-- Coal Mine Card-->
-                        <div class="col industry-card" onClick="onClick_createIndustryObject('WWi-A1-fuelplantcount')">
+                        <div class="col industry-card" onClick="onClick_createIndustryObject('WWi-A1-fuelplantcount'); getCurrentAmount('WWi-A1-fuelplantcount', 'fuelPlantCurrentCount')">
                             <div class="card-body">
                                 <h5 class="card-title">Build Fuel Plant</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Current amount:</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" id="fuelPlantCurrentCount">Current Amount: 0</h6>
                                 <div class="industry-card-desc">
                                     <p class="card-text">Fuel plants will help us output the needed resources to fuel vehicles and machinery!</p>
                                 </div>
@@ -128,43 +128,43 @@
                 </div>
                 <!-- End of Industry Information Container-->
                 <!-- Industry Card Container-->
-                <div class="container">
+                <div class="container noselect">
                     <div class="row">
                         <!-- Lumber Mill Card-->
-                        <div class="col industry-card" onClick="onClick_createUnitObject('WWi-A1-unitsoldiercount')">
+                        <div class="col industry-card" onClick="onClick_createUnitObject('WWi-A1-unitsoldiercount'); getCurrentAmount('WWi-A1-unitsoldiercount', 'untsoliderCurrentCount')">
                             <div class="card-body">
                                 <h5 class="card-title">Train Soldier</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">3 Lumber</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" id="untsoliderCurrentCount">Current Amount: 0</h6>
                                 <div class="industry-card-desc">
                                     <p class="card-text">We can use lumber to build basic waepon parts for new soldiers!</p>
                                 </div>
                             </div>      
                         </div>
                         <!-- Steel Mine Card-->
-                        <div class="col industry-card" onClick="onClick_createUnitObject('WWi-A1-unitapccount')">
+                        <div class="col industry-card" onClick="onClick_createUnitObject('WWi-A1-unitapccount'); getCurrentAmount('WWi-A1-unitapccount', 'unitapcCurrentCount')">
                             <div class="card-body">
                                 <h5 class="card-title">Build APC</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">3 Steel / 3 Gunpowder</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" id="unitapcCurrentCount">Current Amount: 0</h6>
                                 <div class="industry-card-desc">
                                     <p class="card-text">We can use steel and gunpowder to build APCs!</p>
                                 </div>
                             </div>
                         </div>
                         <!-- Lead Mine Card-->
-                        <div class="col industry-card" onClick="onClick_createUnitObject('WWi-A1-unittankcount')">
+                        <div class="col industry-card" onClick="onClick_createUnitObject('WWi-A1-unittankcount'); getCurrentAmount('WWi-A1-unittankcount', 'unittankCurrentCount')">
                             <div class="card-body">
                                 <h5 class="card-title">Build Tank</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">5 Steel / 10 Gunpowder / 3 Fuel</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" id="unittankCurrentCount">Current Amount: 0</h6>
                                 <div class="industry-card-desc">
                                     <p class="card-text">We can use steel, gundpowder and fuel to build heavily armored tanks!</p>
                                 </div>
                             </div>
                         </div>
                         <!-- Coal Mine Card-->
-                        <div class="col industry-card" onClick="onClick_createUnitObject('WWi-A1-unitjetcount')">
+                        <div class="col industry-card" onClick="onClick_createUnitObject('WWi-A1-unitjetcount'); getCurrentAmount('WWi-A1-unitjetcount', 'unitjetCurrentCount')">
                             <div class="card-body">
                                 <h5 class="card-title">Build Fighter Jet</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">4 Steel / 50 Gunpowder / 25 Fuel</h6>
+                                <h6 class="card-subtitle mb-2 text-muted" id="unitjetCurrentCount">Current Amount: 0</h6>
                                 <div class="industry-card-desc">
                                     <p class="card-text">We can use steel, gundpowder, and fuel to build quick striking, fighter jets!</p>
                                 </div>

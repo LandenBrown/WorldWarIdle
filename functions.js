@@ -32,6 +32,8 @@ function loadInitialContent(){
         //alert("data does not exist in local storage...")
     }
 
+
+
 }
 
 
@@ -290,7 +292,19 @@ function loadCountryDataToLocalStorage(){
 }
 
 
-
+//Populate current amounts in html
+function popCurrentAmmounts(){
+    //Populate Current Amounts for refineries in industry tab
+    getCurrentAmount('WWi-A1-lumbermillcount', 'lumberMillCurrentCount')
+    getCurrentAmount('WWi-A1-steelminecount', 'steelMineCurrentCount')
+    getCurrentAmount('WWi-A1-gunpowderplantcount', 'gunpowderPlantCurrentCount')
+    getCurrentAmount('WWi-A1-fuelplantcount', 'fuelPlantCurrentCount')
+    //Populate Current Ammounts for units in training tab
+    getCurrentAmount('WWi-A1-unitsolidercount', 'unitsoldierCurrentCount')
+    getCurrentAmount('WWi-A1-unitapccount', 'unitapcCurrentCount')
+    getCurrentAmount('WWi-A1-unittankcount', 'unittankCurrentCount')
+    getCurrentAmount('WWi-A1-unitjetcount', 'unitjetCurrentCount')
+}
 //INCREMENTING INDUSTRY VALUES
 function onClick_createIndustryObject(x){
     var currentResourceCount = localStorage.getItem(x);
@@ -307,7 +321,11 @@ function onClick_createUnitObject(x){
     localStorage.setItem(x, currentUnitCount);
 }
 
-
+//GET CURRENT VALUES FOR CARD
+function getCurrentAmount(x, y){
+    storageamount = localStorage.getItem(x);
+    document.getElementById(y).innerHTML = "Current Amount: " + storageamount;
+}
 
 
 //Wait for page to load before attempting to interact with any elements
