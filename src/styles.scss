@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  background-image: url("./assets/mainBack.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Information-Container-Header {
+  color: white;
+  font-weight: bold;
+}
+
+.Information-Container-Para {
+  color: white;
+}
+
+.Section-Information-Container {
+  background-color: #343a40;
+  border-radius: 8px;
+}
+
+.section-card {
+  background-color: #343a40;
+  transition: 0.3s;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.section-card:hover {
+  background-color: #145a3f;
+  border-color: #343a40;
+}
+.section-card-desc {
+  height: 100px;
+  width: 200px;
+  color: rgb(202, 202, 202);
+}
+.card-title {
+  color: whitesmoke;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

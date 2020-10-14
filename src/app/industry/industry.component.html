@@ -1,0 +1,74 @@
+<!-- Industry Container-->
+<div class="container-fluid"
+     id="Industry-Container">
+
+  <!-- Industry Information Container-->
+  <div class="container Section-Information-Container">
+    <h2 class="Information-Container-Header">Welcome to your industry!</h2>
+    <div>
+      <p class="Information-Container-Para">Here you can focus on putting workers to use to gather the
+        necessary resources to fuel your campaigns!<br></p>
+    </div>
+  </div>
+  <!-- End of Industry Information Container-->
+  <!-- Industry Card Container-->
+  <div class="container noselect">
+    <div class="row">
+      <!-- Lumber Mill Card-->
+      <div class="col section-card"
+           (click)="onClick_createIndustryObject('WWi-A1-lumbermillcount'); getCurrentAmount('WWi-A1-lumbermillcount', 'lumberMillCurrentCount')">
+        <div class="card-body">
+          <h5 class="card-title">Build Lumber Mill</h5>
+          <h6 class="card-subtitle mb-2 text-muted"
+              id="lumberMillCurrentCount">Current Amount: 0</h6>
+          <div class="section-card-desc">
+            <p class="card-text">Lumber mills will help us output the needed resources to build
+              basic weapon parts!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Steel Mine Card-->
+      <div class="col section-card"
+           (click)="onClick_createIndustryObject('WWi-A1-steelminecount'); getCurrentAmount('WWi-A1-steelminecount', 'steelMineCurrentCount')">
+        <div class="card-body">
+          <h5 class="card-title">Build Steel Mine</h5>
+          <h6 class="card-subtitle mb-2 text-muted"
+              id="steelMineCurrentCount">Current Amount: 0</h6>
+          <div class="section-card-desc">
+            <p class="card-text">Steel mines will help us output the needed resources to build
+              vehicles and structures!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Lead Mine Card-->
+      <div class="col section-card"
+           (click)="onClick_createIndustryObject('WWi-A1-gunpowderplantcount'); getCurrentAmount('WWi-A1-gunpowderplantcount', 'gunpowderPlantCurrentCount')">
+        <div class="card-body">
+          <h5 class="card-title">Build Gunpowder Plant</h5>
+          <h6 class="card-subtitle mb-2 text-muted"
+              id="gunpowderPlantCurrentCount">Current Amount: 0</h6>
+          <div class="section-card-desc">
+            <p class="card-text">Gunpowder plants will help us ouput the needed resources to build
+              ammunition!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Coal Mine Card-->
+      <div class="col section-card"
+           (click)="onClick_createIndustryObject('WWi-A1-fuelplantcount'); getCurrentAmount('WWi-A1-fuelplantcount', 'fuelPlantCurrentCount')">
+        <div class="card-body">
+          <h5 class="card-title">Build Fuel Plant</h5>
+          <h6 class="card-subtitle mb-2 text-muted"
+              id="fuelPlantCurrentCount">Current Amount: 0</h6>
+          <div class="section-card-desc">
+            <p class="card-text">Fuel plants will help us output the needed resources to fuel
+              vehicles and machinery!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Industry Row -->
+  </div>
+  <!-- End Industry Card Container-->
+</div>
+<!-- End Industry Container-->

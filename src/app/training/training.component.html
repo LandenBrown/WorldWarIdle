@@ -1,0 +1,71 @@
+<!-- Training Container-->
+<div class="container-fluid"
+     id="Training-Container">
+  <!-- Industry Information Container-->
+  <div class="container Section-Information-Container">
+    <h2 class="Information-Container-Header">Welcome to the Training Center!</h2>
+    <div>
+      <p class="Information-Container-Para">Here we can focus on using the resources we've collected and
+        putting them towards building power!<br></p>
+    </div>
+  </div>
+  <!-- End of Industry Information Container-->
+  <!-- Industry Card Container-->
+  <div class="container noselect">
+    <div class="row">
+      <!-- Lumber Mill Card-->
+      <div class="col section-card"
+           (click)="onClick_createUnitObject('WWi-A1-unitsoldiercount'); getCurrentAmount('WWi-A1-unitsoldiercount', 'untsoliderCurrentCount')">
+        <div class="card-body">
+          <h5 class="card-title">Train Soldier</h5>
+          <h6 class="card-subtitle mb-2 text-muted"
+              id="untsoliderCurrentCount">Current Amount: 0</h6>
+          <div class="section-card-desc">
+            <p class="card-text">We can use lumber to build basic waepon parts for new soldiers!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Steel Mine Card-->
+      <div class="col section-card"
+           (click)="onClick_createUnitObject('WWi-A1-unitapccount'); getCurrentAmount('WWi-A1-unitapccount', 'unitapcCurrentCount')">
+        <div class="card-body">
+          <h5 class="card-title">Build APC</h5>
+          <h6 class="card-subtitle mb-2 text-muted"
+              id="unitapcCurrentCount">Current Amount: 0</h6>
+          <div class="section-card-desc">
+            <p class="card-text">We can use steel and gunpowder to build APCs!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Lead Mine Card-->
+      <div class="col section-card"
+           (click)="onClick_createUnitObject('WWi-A1-unittankcount'); getCurrentAmount('WWi-A1-unittankcount', 'unittankCurrentCount')">
+        <div class="card-body">
+          <h5 class="card-title">Build Tank</h5>
+          <h6 class="card-subtitle mb-2 text-muted"
+              id="unittankCurrentCount">Current Amount: 0</h6>
+          <div class="section-card-desc">
+            <p class="card-text">We can use steel, gundpowder and fuel to build heavily armored
+              tanks!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Coal Mine Card-->
+      <div class="col section-card"
+           (click)="onClick_createUnitObject('WWi-A1-unitjetcount'); getCurrentAmount('WWi-A1-unitjetcount', 'unitjetCurrentCount')">
+        <div class="card-body">
+          <h5 class="card-title">Build Fighter Jet</h5>
+          <h6 class="card-subtitle mb-2 text-muted"
+              id="unitjetCurrentCount">Current Amount: 0</h6>
+          <div class="section-card-desc">
+            <p class="card-text">We can use steel, gundpowder, and fuel to build quick striking,
+              fighter jets!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Industry Row -->
+  </div>
+  <!-- End Industry Card Container-->
+</div>
+<!-- End Training Container-->

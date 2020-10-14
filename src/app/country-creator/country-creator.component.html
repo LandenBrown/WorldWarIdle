@@ -1,0 +1,91 @@
+<!-- Beging Country-Creator-Container -->
+<div class="container country-creator-container"
+     id="country-creator-splash">
+
+  <div class="row country-creator-title">
+    <div class="col-md-12">
+      <h3>Please create your nation</h3>
+    </div>
+  </div>
+  <div class="row country-creator-selector">
+    <div class="col-md-12">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Your country's leader's name:</label>
+          <input type="email"
+                 class="form-control"
+                 id="leaderInputBox"
+                 name="leaderInputName"
+                 placeholder="Enter Leader Name"
+                 [(ngModel)]="leaderInputName">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row country-selector-roW">
+    <div class="col-md-4 country-selector-col country-selector-col-selected"
+         [class.country-selector-col-selected]="this.selectedCountry==='America'"
+         id="americaSelector"
+         (click)="selectAmerica()">
+      <h4>America</h4>
+    </div>
+    <div class="col-md-4 country-selector-col"
+         id="chinaSelector"
+         [class.country-selector-col-selected]="this.selectedCountry==='China'"
+         (click)="selectChina()">
+      <h4>China</h4>
+    </div>
+    <div class="col-md-4 country-selector-col"
+         id="russiaSelector"
+         [class.country-selector-col-selected]="this.selectedCountry==='Russia'"
+         (click)="selectRussia()">
+      <h4>Russia</h4>
+    </div>
+  </div>
+  <!-- America Selected Column-->
+  <div *ngIf="this.selectedCountry==='America'"
+       class="container"
+       id="america-selected-container">
+    <h4 class="country-selected-container">America has been selected</h4>
+    <div class="container country-info-container">
+      <p>Starting Lumber: 100</p>
+      <p>Starting Steel: 300</p>
+      <p>Starting Gunpowder: 200</p>
+      <p>Starting Fuel: 100</p>
+    </div>
+  </div>
+  <!-- End America Selected Column-->
+
+  <!-- China Selected Column-->
+  <div *ngIf="this.selectedCountry==='China'"
+       class="container"
+       id="china-selected-container">
+    <h4 class="country-selected-container">China has been selected</h4>
+    <div class="container country-info-container">
+      <p>Starting Lumber: 200</p>
+      <p>Starting Steel: 100</p>
+      <p>Starting Gunpowder: 400</p>
+      <p>Starting Fuel: 100</p>
+    </div>
+  </div>
+  <!-- End China Selected Column-->
+
+  <!-- Russia Selected Column-->
+  <div *ngIf="this.selectedCountry==='Russia'"
+       class="container"
+       id="russia-selected-container">
+    <h4 class="country-selected-container">Russia has been selected</h4>
+    <div class="container country-info-container">
+      <p>Starting Lumber: 300</p>
+      <p>Starting Steel: 100</p>
+      <p>Starting Gunpowder: 100</p>
+      <p>Starting Fuel: 300</p>
+    </div>
+  </div>
+  <!-- End Russia Selected Column-->
+  <button type="submit"
+          class="btn btn-primary"
+          style="margin-top: 20px"
+          (click)="loadCountryDataToLocalStorage()">Finish & Play</button>
+</div>
+<!-- End Country-Creator-Container -->

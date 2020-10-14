@@ -1,0 +1,30 @@
+<!-- Nav Bar -->
+<div class="container fixed-nav-bar">
+  <div class="row">
+    <div class="col col-sm-3 border text-white fixed-nav-bar-item"
+         id="Nav-Item-Industry"
+         [class.fixed-nav-bar-item-selected]="mode=='industry'"
+         routerLink="/industry">
+      <p>Industry</p>
+    </div>
+    <div class="col col-sm-3 border text-white fixed-nav-bar-item"
+         id="Nav-Item-Training"
+         [class.fixed-nav-bar-item-selected]="mode=='training'"
+         routerLink="/training">
+      <p>Training</p>
+    </div>
+    <div class="col col-sm-3 border text-white fixed-nav-bar-item"
+         id="Nav-Item-Operations"
+         [class.fixed-nav-bar-item-selected]="mode=='operations'"
+         routerLink="/operations">
+      <p>Operations</p>
+    </div>
+    <div class="col col-sm-3 border text-white fixed-nav-bar-item"
+         id="Nav-Item-Statistics"
+         [class.fixed-nav-bar-item-selected]="mode=='statistics'"
+         routerLink="/statistics">
+      <p>Statistics</p>
+    </div>
+  </div>
+</div>
+<!-- End Nav Bar -->

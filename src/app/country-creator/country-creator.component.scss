@@ -1,0 +1,46 @@
+/* COUNTRY CREATION PAGE */
+
+.country-creator-container {
+  background-color: #343a40;
+  border-radius: 8px;
+  padding-bottom: 8px;
+}
+
+.country-creator-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.country-creator-selector {
+  color: #9a9b9c;
+  padding-bottom: 8px;
+}
+
+.country-selector-col {
+  background-color: #676a6d;
+  border: none;
+  color: white;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.country-selector-col-selected {
+  background-color: #145a3f;
+}
+
+.country-selector-col:hover {
+  background-color: #145a3f;
+  text-shadow: 2px 3px black;
+  border-radius: 20px;
+}
+
+.country-selected-container {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.country-info-container {
+  color: whitesmoke;
+}
